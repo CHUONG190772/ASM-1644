@@ -1,28 +1,88 @@
-<div class="container col-md-10">
-  <form
-    class="card p-3 bg-light text-center mt-3 mb-3"
-    href="dolly/edit/{{dolly._id}}"
-    method="post"
-  >
+{{!-- <div class="container col-md-10">
+  <form class="card p-3 bg-light text-center mt-3 mb-3" href="dolly/edit/{{dolly._id}}" method="post">
     <h2 class="text-bg-success">Edit robot</h2>
     <div class="form-group">
       <label class="h3 text-secondary">Name</label>
-      <input type="text" name="name" class="form-control" required 
-      value="{{dolly.name}}"
-      /></div>
+      <input type="text" name="name" class="form-control" required value="{{dolly.name}}" />
+    </div>
     <div class="form-group">
       <label class="h3 text-secondary">Brand</label>
-      <input type="text" name="brand" class="form-control" required  value="{{dolly.brand}}"/></div>
+      <input type="text" name="brand" class="form-control" required value="{{dolly.brand}}" />
+    </div>
     <div class="form-group">
       <label class="h3 text-secondary">Price</label>
-      <input type="number" name="price" class="form-control" required   value="{{dolly.price}}"/></div>
+      <input type="number" name="price" class="form-control" required value="{{dolly.price}}" />
+    </div>
     <div class="form-group">
       <label class="h3 text-secondary">Image</label>
       <br>
       <img src="{{dolly.image}}" width="100" height="100">
       <br>
-      <input type="text" name="image" class="form-control" required value="{{dolly.image}}"/></div>
+      <input type="text" name="image" class="form-control" required value="{{dolly.image}}" />
+    </div>
     <div class="form-group">
-      <input type="submit" class="btn btn-primary mt-3" value="Edit" /></div>
+      <input type="submit" class="btn btn-primary mt-3" value="Edit" />
+    </div>
   </form>
-</div>
+</div> --}}
+
+<!-- Section: Design Block -->
+<section class="text-center">
+  <!-- Background image -->
+  <div class="p-5 bg-image" style="
+        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+        height: 300px;
+        "></div>
+  <!-- Background image -->
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        margin-top: -100px;
+        background: hsla(0, 48%, 79%, 0.8);
+        backdrop-filter: blur(30px);
+        ">
+    <div class="card-body py-5 px-md-5">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5">Toy store Greenwich</h2>
+          <form class="card p-3 bg-light text-center mt-3 mb-3" href="dolly/edit/{{dolly._id}}" method="post">
+            <h2 class="text-bg-success">Edit robot</h2>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="h3 text-secondary">Name</label>
+                  <input type="text" name="name" class="form-control" required value="{{dolly.name}}" </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="h3 text-secondary">Brand</label>
+                    <input type="text" name="brand" class="form-control" required value="{{dolly.brand}}" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <label class="h3 text-secondary">Price</label>
+                <input type="number" name="price" class="form-control" required value="{{dolly.price}}" />
+              </div>
+
+              <!-- Password input -->
+              <div class="form-group">
+                <label class="h3 text-secondary">Image</label>
+                <br>
+                <img src="{{dolly.image}}" width="100" height="100">
+                <br>
+                <input type="text" name="image" class="form-control" required value="{{dolly.image}}" />
+              </div>
+
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary mt-3" value="Edit" />
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section: Design Block -->

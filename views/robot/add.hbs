@@ -1,24 +1,54 @@
-<div class="container col-md-10">
-  <form
-    class="card p-3 bg-light text-center mt-3 mb-3"
-    href="robot/add"
-    method="post"
-  >
-    <h2 class="text-bg-success">Add new robot
-    </h2>
-    <div class="form-group">
-      <label class="h3 text-secondary">Name</label>
-      <input type="text" name="name" class="form-control" required /></div>
-    <div class="form-group">
-      <label class="h3 text-secondary">Brand</label>
-      <input type="text" name="brand" class="form-control" required /></div>
-    <div class="form-group">
-      <label class="h3 text-secondary">Price</label>
-      <input type="number" name="price" class="form-control" required /></div>
-    <div class="form-group">
-      <label class="h3 text-secondary">Image</label>
-      <input type="text" name="image" class="form-control" required /></div>
-    <div class="form-group">
-      <input type="submit" class="btn btn-primary mt-3" value="Add" /></div>
-  </form>
-</div>
+<section class="vh-100" style="background-color: #250a10;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="https://rare-gallery.com/thumbs/577681-optimus-prime.jpg" alt="add form" class="img-fluid"
+                style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form href="robot/add" method="post">
+
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <span class="h1 fw-bold mb-0" style="color:#3f0a15;">Toy store Greenwich</span>
+                  </div>
+
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Add new robot</h5>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example3" class="form-control form-control-lg" name="name"
+                      placeholder="name" />
+                    <label class="form-label" for="form3Example3" required /></label>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example3" class="form-control form-control-lg" name="brand"
+                      placeholder="brand" />
+                    <label class="form-label" for="form3Example3" required /></label>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="number" id="form3Example3" class="form-control form-control-lg" name="price"
+                      placeholder="price" />
+                    <label class="form-label" for="form3Example3" required /></label>
+                  </div>
+                  <div class="form-outline mb-3">
+                    <input type="text" id="form3Example4" class="form-control form-control-lg" name="image"
+                      placeholder="image" />
+                    <label class="form-label" for="form3Example4" required /></label>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" class="btn btn-primary mt-3" value="Add" />
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
