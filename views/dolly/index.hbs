@@ -1,0 +1,31 @@
+<table class="table table-bordered text-center">
+  <tr>
+    <th class="h1" colspan="3">Dolly List</th>
+    <th>
+      <a class="btn btn-success" href="/dolly/add">Add</a>
+    </th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Image</th>
+    <th>Menu</th>
+  </tr>
+  {{#each dollys}}
+    <tr>
+      <td>{{name}}</td>
+      <td>$ {{price}}</td>
+      <td>
+        <a href="/dolly/detail/{{_id}}">
+          <img src="{{image}}" width="100" height="100" />
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-warning" href="/dolly/edit/{{_id}}">Edit</a>
+        <a class="btn btn-danger" href="/dolly/delete/{{_id}}"
+        onclick="return confirm('Are you sure to delete this dolly ?');"
+        >Delete</a>
+      </td>
+    </tr>
+  {{/each}}
+</table>

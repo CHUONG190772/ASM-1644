@@ -1,0 +1,31 @@
+<table class="table table-bordered text-center">
+  <tr>
+    <th class="h1" colspan="3">Robot List</th>
+    <th>
+      <a class="btn btn-success" href="/robot/add">Add</a>
+    </th>
+  </tr>
+  <tr>
+    <th>Robot Name</th>
+    <th>Robot Price</th>
+    <th>Robot Image</th>
+    <th>Menu</th>
+  </tr>
+  {{#each robots}}
+    <tr>
+      <td>{{name}}</td>
+      <td>$ {{price}}</td>
+      <td>
+        <a href="/robot/detail/{{_id}}">
+          <img src="{{image}}" width="100" height="100" />
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-warning" href="/robot/edit/{{_id}}">Edit</a>
+        <a class="btn btn-danger" href="/robot/delete/{{_id}}"
+        onclick="return confirm('Are you sure to delete this robot ?');"
+        >Delete</a>
+      </td>
+    </tr>
+  {{/each}}
+</table>
