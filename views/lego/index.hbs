@@ -1,0 +1,31 @@
+
+<table class="table table-bordered text-center">
+    <tr>
+        <th class="h1" colspan="3">Lego List</th>
+        <th>
+            <a class="btn btn-success" href="/lego/add">Add</a>
+        </th>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <th>Price$</th>
+        <th>Image</th>
+        <th>Color</th>
+        <th>Date</th>
+    </tr>
+    {{#each robots}}
+    <tr>
+        <td>{{name}}</td>
+        <td>$ {{price}}</td>
+        <td>
+            <a href="/lego/detail/{{_id}}">
+                <img src="{{image}}" width="100" height="100" />
+            </a>
+        </td>
+        <td>
+            <a class="btn btn-danger" href="/lego/delete/{{_id}}"
+                onclick="return confirm('Are you sure to delete this lego ?');">Delete</a>
+        </td>
+    </tr>
+    {{/each}}
+</table>

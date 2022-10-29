@@ -8,16 +8,21 @@ var indexRouter = require("./routes/index");
 //khai báo router
 var robotRouter = require("./routes/robot");
 var dollyRouter = require("./routes/dolly");
+var legoRouter = require("./routes/lego");
 
 var app = express();
 
-//cấu hình mongoose (database)
 var mongoose = require("mongoose");
 var db =
   "mongodb+srv://chuongx31:ImNhgAqAJq6VqVVf@cluster0.f2xyt.mongodb.net/toy";
-mongoose.connect(db, { useNewUrlParser: true });
+mongoose.connect(db, { useNewUrlParser: true }, err => {
+  if (!err) {
+      console.log('DB connect succeed !')
+  } else {
+      console.error(err)
+  }
+});
 
-//cấu hình body-parser (form input)
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -32,22 +37,18 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-//sử dụng router
 app.use("/robot", robotRouter);
 app.use("/dolly", dollyRouter);
+app.use("/lego", legoRouter);
 
-// catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
 
-// error handler
 app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
 
-  // render the error page
   res.status(err.status || 500);
   res.render("error");
 });
