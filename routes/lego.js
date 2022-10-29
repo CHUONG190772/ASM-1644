@@ -10,6 +10,13 @@ router.get("/", (req, res) => {
         }
     });
 });
+router.get("/api", (req, res) => {
+    LegoModel.find((err, data) => {
+        if (!err) {
+            res.json(data);
+        }
+    });
+});
 
 router.get("/add", (req, res) => {
     res.render("lego/add");
