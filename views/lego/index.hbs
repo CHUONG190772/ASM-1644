@@ -1,7 +1,7 @@
 
 <table class="table table-bordered text-center">
     <tr>
-        <th class="h1" colspan="">Lego List</th>
+        <th class="h1" colspan="5">Lego List</th>
         <th>
             <a class="btn btn-success" href="/lego/add">Add</a>
         </th>
@@ -19,7 +19,7 @@
         <td>{{name}}</td>
         <td>$ {{price}}</td>
         <td>{{color}}</td>
-        <td>{{dateFormat date: "DD/MM/YYYY"}}</td>
+        <td>{{dateFormat date "DD/MM/YYYY"}}</td>
         <td>
             <a href="/lego/detail/{{_id}}">
                 <img src="{{image}}" width="100" height="100" />
